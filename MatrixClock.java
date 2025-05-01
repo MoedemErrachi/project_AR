@@ -34,7 +34,7 @@ public class MatrixClock implements Serializable {
         System.out.println("Process " + processId + " - Matrix Clock updated to:\n" + matrixToString() + " (receive)");
     }
 
-    private String matrixToString() {
+    String matrixToString() {
         StringBuilder sb = new StringBuilder();
         for (int[] row : clock) {
             sb.append(Arrays.toString(row)).append("\n");
@@ -49,4 +49,5 @@ public class MatrixClock implements Serializable {
         }
         return copy;
     }
+    
 }
